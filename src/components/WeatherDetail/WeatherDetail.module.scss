@@ -1,88 +1,78 @@
-.wrapper {
-  background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+.weather_wrapper {
+  background-image: radial-gradient(circle 311px at 8.6% 27.9%, rgba(62, 147, 252, 0.57) 12.9%, rgba(239, 183, 192, 0.44) 91.2%);
   padding: 15px;
   border: 1px solid black;
   border-radius: 5px;
-  margin-right: 15px;
   box-shadow: 0 5px 10px 5px #000;
   width: 100%;
-}
 
-.temperature_wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 5px 0;
-  font-style: italic;
-}
+  .temperature_header {
+    text-align: center;
+    font-size: 2em;
+  }
 
-.temperature_header {
-  text-align: center;
-  font-size: 2em;
-}
+  .temperature_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0;
 
-.temperature_item {
-  display: flex;
-  align-items: center;
-  font-size: 2em;
-}
+    .temperature_item {
+      display: flex;
+      align-items: center;
+      font-size: 2em;
 
-.temperature_item svg, .other_wrapper svg {
-  margin-right: 5px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-}
+      svg,
+      .other_wrapper svg {
+        margin-right: 5px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+      }
+    }
+  }
 
-.other_wrapper {
-  margin: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  font-weight: 400;
-  font-size: larger;
-}
+  .other_wrapper {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 400;
+    font-size: larger;
+    .humidity,
+    .pressure,
+    .precipitation {
 
-.humidity,
-.pressure,
-.precipitation {
+    }
+    svg {
+      margin-right: 5px;
+    }
+  }
 
-}
+  .wind_header {
+    text-align: center;
+    font-size: 2em;
+  }
 
-.wind_header {
-  text-align: center;
-  font-size: 2em;
-  color: royalblue;
-}
+  .wind_direction {
+    font-size: 2em;
+    text-align: center;
 
-.wind_direction {
-  font-size: 2em;
-  text-align: center;
-}
+    svg {
+      margin-left: 15px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+    }
+  }
 
-
-.wind_direction svg {
-  margin-left: 15px;
-  border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-}
-
-.wind_speed {
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.svg_icon {
-}
-
-.wind_direction_text {
-}
-
-.weather_wrapper svg {
+  .wind_speed {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+  }
 }

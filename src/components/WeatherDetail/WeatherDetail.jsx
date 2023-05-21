@@ -7,7 +7,7 @@ const WeatherDetail = ({data, i}) => {
     }
 
     return (
-        <div className={c.wrapper}>
+        <div className={c.weather_wrapper}>
             <div className={c.temperature_header}>
                 Temperature
             </div>

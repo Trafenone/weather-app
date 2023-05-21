@@ -5,6 +5,7 @@ import WeatherPreview from "./components/WeatherPreview/WeatherPreview";
 import WeatherDetail from "./components/WeatherDetail/WeatherDetail";
 import {useFetching} from "./hooks/useFetching";
 import WeatherService from "./API/WeatherService";
+import WeatherList from "./components/WeatherList/WeatherList";
 
 function App() {
     const [location, setLocation] = React.useState('Kyiv');
@@ -24,22 +25,29 @@ function App() {
         setLocation(value);
     }
 
+    function handleSet(value) {
+        setIndex(value);
+    }
+
     return (
         <div className="App">
-            <div className={'search-box-up'}>
-                <Search search={handleSearch}/>
-            </div>
-
-            {error &&
-                <h1 style={{color: 'red'}}>Error: {error}</h1>
-            }
-
-            {weather &&
-                <div className={'weather'}>
-                    <WeatherPreview data={weather} i={index}/>
-                    <WeatherDetail data={weather} i={index}/>
+                <div className='search-box-up'>
+                    <Search search={handleSearch}/>
                 </div>
-            }
+
+                {error &&
+                    <h1 style={{color: 'red'}}>Error: {error}</h1>
+                }
+
+                {weather &&
+                    <div className='weather'>
+                        <div className='weather_info'>
+                            <WeatherPreview data={weather} i={index}/>
+                            <WeatherDetail data={weather} i={index}/>
+                        </div>
+                        <WeatherList weathers={weather.data} currentIndex={index} setIndex={handleSet}/>
+                    </div>
+                }
         </div>
     );
 }
